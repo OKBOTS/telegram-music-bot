@@ -1,7 +1,8 @@
 """Launches the bot"""
 
 from asyncio import run
-
+import subprocess
+import os
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
@@ -59,9 +60,16 @@ async def main() -> None:
         await session.close()
 
 
+def start_web_server():
+    """Starts the web server in the background"""
+    command = ["python", "simple_server.py"]
+    subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, cwd=os.getcwd())
+
+
 if __name__ == "__main__":
     logger.info("Starting bot")
     try:
+        start_web_server()  # Start the web server in the background
         run(main())
     except (KeyboardInterrupt, SystemExit):
         pass
