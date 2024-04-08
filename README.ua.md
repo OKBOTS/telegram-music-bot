@@ -42,24 +42,24 @@
 </p>
 
 <p align="right">
+    <a href="https://github.com/rin-gil/YoutubeMusicDownloadBot/blob/master/README.md">
+        <img src="https://raw.githubusercontent.com/rin-gil/rin-gil/main/assets/img/icons/flags/united-kingdom_24x24.png" alt="En">
+    </a>
     <a href="https://github.com/rin-gil/YoutubeMusicDownloadBot/blob/master/README.ru.md">
         <img src="https://raw.githubusercontent.com/rin-gil/rin-gil/main/assets/img/icons/flags/russia_24x24.png" alt="Ru">
-    </a>
-    <a href="https://github.com/rin-gil/YoutubeMusicDownloadBot/blob/master/README.ua.md">
-        <img src="https://raw.githubusercontent.com/rin-gil/rin-gil/main/assets/img/icons/flags/ukraine_24x24.png" alt="Ua">
     </a>
 </p>
 
 ## YouTube Music Download Bot
 
-Bot to download music from YouTube. Working version is available here [@YT_upl_Bot](https://t.me/YT_upl_Bot)
+Бот для завантаження музики з YouTube. Робоча версія доступна за посиланням [@YT_upl_Bot](https://t.me/YT_upl_Bot)
 
-### Features
+### Можливості
 
-* Search for music on YouTube
-* Downloading found videos in .mp3 format
+* Пошук музики на YouTube
+* Скачування знайдених відео у форматі .mp3
 
-### Installing
+### Встановлення
 
 ```
 git clone https://github.com/rin-gil/YoutubeMusicDownloadBot.git
@@ -70,53 +70,53 @@ pip install -r requirements.txt
 mv .env.dist .env
 ```
 
-### Setup and launch
+### Налаштування та запуск
 
-* Register a new bot with [@BotFather](https://t.me/BotFather) and copy the obtained token
-* Insert the bot token into the .env file
-* Running the bot through the bot.py file `python bot.py`
+* Зареєструйте нового бота у [@BotFather](https://t.me/BotFather) і скопіюйте отриманий токен
+* Вставте токен бота у файл .env
+* Запуск бота через файл bot.py `python bot.py`
 
-### Restrictions
+### Обмеження
 
-* Bot only downloads music (audio file .mp3)
-* Bot does not download live broadcasts
-* The entire playlist is not downloaded, only one item is downloaded
-* Bot does not download clips longer than 15 minutes
-* The title for the audio file is generated from the YouTube video title. Since the title may contain undesirable characters not supported by the file system, all characters except letters, numbers, spaces, '_' and '-' characters are removed from the title, the title length is truncated to 100 characters
+* Бот завантажує тільки музику (аудіофайл .mp3)
+* Бот не завантажує живі трансляції
+* Плейлист не завантажується повністю, завантажується тільки один елемент
+* Бот не скачує кліпи тривалістю понад 15 хвилин
+* Назва для аудіофайлу формується з назви відео на YouTube. Оскільки в назві можуть міститися небажані символи, що не підтримуються файловою системою, з назви прибираються всі символи, крім букв, цифр, пробілів, знаків '_' і '-', довжина назви обрізається до 100 символів.
 
-### Localization
+### Локалізація
 
-* Since version 1.1.0 the bot added localization for English, Ukrainian and Russian
-* To add a translation in your language, do the following:
-  1. go to the folder with the bot
-  2. activate the virtual environment:
+* З версії 1.1.0 у бот додано локалізацію для англійської, української та російської мови
+* Для додавання перекладу на свою мову, зробіть наступне:
+  1. перейдіть у папку з ботом
+  2. активуйте віртуальне оточення:
 
      `source venv/bin/activate`
-  3. create a translation file for your language, where **{language}** is the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) language code
+  3. створіть файл перекладу на вашу мову, де **{language}** - код мови за стандартом [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 
      `pybabel init --input-file=tgbot/locales/tgbot.pot --output-dir=tgbot/locales --domain=tgbot --locale={language}`
-  4. translate the lines in the file **locales/{language}/LC_MESSAGES/tgbot.po**
-  5. compile the translation with the command:
+  4. перекладіть рядки у файлі **locales/{language}/LC_MESSAGES/tgbot.po**
+  5. скомпілюйте переклад командою:
 
      `pybabel compile --directory=tgbot/locales --domain=tgbot`
-  6. restart the bot
-* If you change the lines to be translated in the code, you will need to completely recreate and compile the 
-  translation files for all localizations:
-  1. extract strings to be translated from the code:
+  6. перезапустіть бота
+* При змінах рядків для перекладу в коді, вам потрібно буде повністю перестворити і скомпілювати файли 
+  перекладу для всіх локалізацій:
+  1. витягти рядки для перекладу з коду:
 
      `pybabel extract --input-dirs=./tgbot --output-file=tgbot/locales/tgbot.pot --sort-by-file --project=YoutubeMusicDownloadBot`
-  2. create translation files for all localizations:
+  2. створити файли перекладу для всіх локалізацій:
 
      `pybabel init --input-file=tgbot/locales/tgbot.pot --output-dir=tgbot/locales --domain=tgbot --locale={language}`
-  3. compile translations:
+  3. скомпілювати переклади:
 
      `pybabel compile --directory=tgbot/locales --domain=tgbot`
-* You can read more about this in the example from the documentation of [aiogram](https://docs.aiogram.dev/en/latest/examples/i18n_example.html)
-
-### Developers
+* Детальніше про це можна прочитати в прикладі з документації [aiogram](https://docs.aiogram.dev/en/latest/examples/i18n_example.html)
+  
+### Розробники
 
 * [Ringil](https://github.com/rin-gil)
 
-### License
+### Ліцензія
 
-YouTubeMusicDownloadBot is licensed under [MIT](https://github.com/rin-gil/YoutubeMusicDownloadBot/blob/master/LICENCE)
+Проект YouTubeMusicDownloadBot поширюється за ліцензією [MIT](https://github.com/rin-gil/YoutubeMusicDownloadBot/blob/master/LICENCE)
