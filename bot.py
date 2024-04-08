@@ -1,6 +1,7 @@
 """Launches the bot"""
 
 from asyncio import run
+from keep_alive import keep_alive
 import subprocess
 import os
 from aiogram import Bot, Dispatcher
@@ -18,7 +19,7 @@ from tgbot.middlewares.localization import i18n
 from tgbot.misc.commands import set_default_commands
 from tgbot.misc.logger import logger
 from tgbot.services.database import database
-
+keep_alive()
 
 def register_all_middlewares(dp: Dispatcher) -> None:
     """Registers middlewares"""
