@@ -1,0 +1,15 @@
+INFO     font_manager.py:1547 [2024-04-08 11:35:55,867] - matplotlib.font_manager - generated new fontManager
+INFO     bot.py:63 [2024-04-08 11:35:56,766] - tgbot.misc.logger - Starting bot
+INFO     dispatcher.py:358 [2024-04-08 11:35:58,434] - aiogram.dispatcher.dispatcher - Start polling.
+WARNING  dispatcher.py:405 [2024-04-08 11:41:46,460] - aiogram.dispatcher.dispatcher - Polling is stopped.
+INFO     bot.py:70 [2024-04-08 11:41:46,461] - tgbot.misc.logger - Bot stopped!
+INFO     bot.py:63 [2024-04-08 11:41:54,834] - tgbot.misc.logger - Starting bot
+INFO     dispatcher.py:358 [2024-04-08 11:41:56,616] - aiogram.dispatcher.dispatcher - Start polling.
+WARNING  dispatcher.py:405 [2024-04-08 11:42:14,019] - aiogram.dispatcher.dispatcher - Polling is stopped.
+INFO     bot.py:70 [2024-04-08 11:42:14,021] - tgbot.misc.logger - Bot stopped!
+INFO     dispatcher.py:433 [2024-04-08 11:42:16,957] - aiogram.dispatcher.dispatcher - Stop polling...
+INFO     bot.py:70 [2024-04-08 11:43:38,713] - tgbot.misc.logger - Starting bot
+INFO     dispatcher.py:358 [2024-04-08 11:43:40,324] - aiogram.dispatcher.dispatcher - Start polling.
+WARNING  dispatcher.py:405 [2024-04-08 11:47:26,240] - aiogram.dispatcher.dispatcher - Polling is stopped.
+INFO     bot.py:78 [2024-04-08 11:47:26,241] - tgbot.misc.logger - Bot stopped!
+INFO     dispatcher.py:433 [2024-04-08 11:47:26,311] - aiogram.dispatcher.dispatcher - Stop polling...
