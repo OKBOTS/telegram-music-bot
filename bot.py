@@ -1,15 +1,15 @@
 """Launches the bot"""
 
-from asyncio import run
-import subprocess
 import os
+import subprocess
+from asyncio import run
+from typing import Union
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 from tgbot.config import Config, load_config
 from tgbot.filters.admin import AdminFilter
 from tgbot.handlers.admin import register_admin
-
 from tgbot.handlers.callbacks import register_callbacks
 from tgbot.handlers.commands import register_commands
 from tgbot.handlers.errors import register_errors
@@ -39,13 +39,14 @@ def register_all_handlers(dp: Dispatcher) -> None:
     register_errors(dp)
 
 
-async def main() -> None:
-    """Launches the bot"""
+async def start_bot() -> None:
+    """Starts the bot"""
     config: Config = load_config()
     bot: Bot = Bot(token=config.tg_bot.token, parse_mode="HTML")
     dp: Dispatcher = Dispatcher(bot=bot, storage=MemoryStorage())
     bot["config"] = config
-    try:  # Start bot
+
+    try:
         register_all_middlewares(dp)
         register_all_filters(dp)
         register_all_handlers(dp)
@@ -53,14 +54,14 @@ async def main() -> None:
         await set_default_commands(dp)
         await dp.skip_updates()
         await dp.start_polling()
-    finally:  # Stop bot
+    finally:
         await dp.storage.close()
         await dp.storage.wait_closed()
         session = await bot.get_session()
         await session.close()
 
 
-def start_web_server():
+def start_web_server() -> None:
     """Starts the web server in the background"""
     command = ["python", "simple_server.py"]
     subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, cwd=os.getcwd())
@@ -69,8 +70,8 @@ def start_web_server():
 if __name__ == "__main__":
     logger.info("Starting bot")
     try:
-        start_web_server()  # Start the web server in the background
-        run(main())
+        start_web_server()
+        run(start_bot())
     except (KeyboardInterrupt, SystemExit):
         pass
     except Exception as ex:
