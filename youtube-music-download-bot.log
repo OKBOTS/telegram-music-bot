@@ -13,3 +13,20 @@ INFO     dispatcher.py:358 [2024-04-08 11:43:40,324] - aiogram.dispatcher.dispat
 WARNING  dispatcher.py:405 [2024-04-08 11:47:26,240] - aiogram.dispatcher.dispatcher - Polling is stopped.
 INFO     bot.py:78 [2024-04-08 11:47:26,241] - tgbot.misc.logger - Bot stopped!
 INFO     dispatcher.py:433 [2024-04-08 11:47:26,311] - aiogram.dispatcher.dispatcher - Stop polling...
+INFO     bot.py:70 [2024-04-08 12:34:30,890] - tgbot.misc.logger - Starting bot
+CRITICAL bot.py:77 [2024-04-08 12:34:31,746] - tgbot.misc.logger - Unknown error: BadRequest('Invalid language code specified')
+INFO     bot.py:78 [2024-04-08 12:34:31,747] - tgbot.misc.logger - Bot stopped!
+INFO     bot.py:70 [2024-04-08 12:35:07,848] - tgbot.misc.logger - Starting bot
+CRITICAL bot.py:77 [2024-04-08 12:35:08,748] - tgbot.misc.logger - Unknown error: BadRequest('Invalid language code specified')
+INFO     bot.py:78 [2024-04-08 12:35:08,749] - tgbot.misc.logger - Bot stopped!
+INFO     bot.py:70 [2024-04-08 12:37:11,002] - tgbot.misc.logger - Starting bot
+CRITICAL bot.py:77 [2024-04-08 12:37:11,838] - tgbot.misc.logger - Unknown error: BadRequest('Invalid language code specified')
+INFO     bot.py:78 [2024-04-08 12:37:11,839] - tgbot.misc.logger - Bot stopped!
+INFO     bot.py:70 [2024-04-08 12:37:48,965] - tgbot.misc.logger - Starting bot
+CRITICAL bot.py:77 [2024-04-08 12:37:49,790] - tgbot.misc.logger - Unknown error: BadRequest('Invalid language code specified')
+INFO     bot.py:78 [2024-04-08 12:37:49,790] - tgbot.misc.logger - Bot stopped!
+INFO     bot.py:70 [2024-04-08 12:40:03,134] - tgbot.misc.logger - Starting bot
+CRITICAL bot.py:77 [2024-04-08 12:40:04,095] - tgbot.misc.logger - Unknown error: BadRequest('Invalid language code specified')
+INFO     bot.py:78 [2024-04-08 12:40:04,096] - tgbot.misc.logger - Bot stopped!
+INFO     bot.py:70 [2024-04-08 12:40:46,889] - tgbot.misc.logger - Starting bot
+INFO     dispatcher.py:358 [2024-04-08 12:40:48,075] - aiogram.dispatcher.dispatcher - Start polling.
